@@ -1,0 +1,40 @@
+version: '2.12.2'
+services:
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    ports:
+      - "80:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: your-email@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: your_password
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+  postgres:
+    image: postgres:15.1
+    container_name: postgresql
+    ports:
+     - "5432:5432"
+    environment:
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: docker_postgres_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres:/var/lib/postgresql/data/pgdata
+  jupyterlab:
+    image: jupyter/base-notebook
+    container_name: jupyterlab
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=1
+    volumes:
+      - ./notebooks/:/notebooks
+    command: start-notebook.sh --NotebookApp.notebook_dir=/notebooks --NotebookApp.token='' --NotebookApp.password=''
+    build:
+      context: .
+      dockerfile: Dockerfile
+volumes:
+  postgres:
+  pgadmin:  
