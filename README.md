@@ -15,7 +15,7 @@ https://youtu.be/f2bTZrSecPM
 
 
 ## Сcылка на видео (задание 1.2):
-https://youtu.be/f2bTZrSecPM
+https://youtu.be/m9cyurbrFMM
 
 
 ### Требования к демонстрации работы (задание 1.2):
