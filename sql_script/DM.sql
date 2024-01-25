@@ -247,3 +247,25 @@ $$;
 CALL dm.fill_f101_round_f('2018-01-31');
 
 SELECT * FROM dm.dm_f101_round_f;
+
+DROP TABLE IF EXISTS DM.DM_F101_ROUND_F_V2 ;
+CREATE TABLE DM.DM_F101_ROUND_F_V2 (
+    REGN numeric(4),
+    PLAN varchar(1),
+    NUM_SC varchar(5),
+    A_P varchar(1),
+    VR numeric(16),
+    VV numeric(16),
+    VITG numeric(33,4),
+    ORA numeric(16),
+    OVA numeric(16),
+    OITGA numeric(33,4),
+    ORP numeric(16),
+    OVP numeric(16),
+    OITGP numeric(33,4),
+    IR numeric(16),
+    IV numeric(16),
+    IITG numeric(33,4),
+    DT date,
+    PRIZ numeric(1)
+);
