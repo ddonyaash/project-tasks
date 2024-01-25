@@ -216,7 +216,7 @@ start_time TIMESTAMP,
 end_time TIMESTAMP,
 status VARCHAR,
 file_path VARCHAR,
-rows_inserted INT,
+rows_count INT,
 error_message TEXT
 );
 
