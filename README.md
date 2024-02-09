@@ -30,7 +30,7 @@ https://youtu.be/m9cyurbrFMM
 
 
 ## Сcылка на видео (задание 1.3):
-https://youtu.be/m9cyurbrFMM
+https://youtu.be/ZXA5-U4sUl4
 
 
 ### Требования к демонстрации работы (задание 1.3):
